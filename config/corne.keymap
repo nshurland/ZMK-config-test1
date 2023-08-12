@@ -72,16 +72,11 @@ keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  **  |  Q  |  W  |  E  |  R  |  T  |** |  Y  |  U   |  I  |  O  |  P     | **   |
-// |  **  |  A  |  S  |  D  |  F  |  G  |** |  H  |  J   |  K  |  L  |  BKSP  | **   |
-// |  **  |  Z  |  X  |  C  |  V  |  B  |** |  N  |  M   |  ,  |  .  |  /     | **   |
-//                    | GUI | LWR | ENT |** | SPC | RSE  | ALT |
                         bindings = <
-&none /**/ &kp Q     &kp W &kp E &kp R &kp T  /**/ &kp Y &kp U  &kp I     &kp O   &kp P    /**/ &none
-&none /**/ &kp A &kp S &kp D &kp F &kp G      /**/ &kp H &kp J  &kp K     &kp L   &kp BSPC /**/ &none
-&none /**/ &kp Z &kp X &kp C &kp V &kp B      /**/ &kp N &kp M  &kp COMMA &kp DOT &kp FSLH /**/ &none
-                  &kp LGUI &mo 1 &kp RET      /**/    &kp SPACE &mo 2 &kp RALT
+&none /**/ &kp Q       &kp W       &kp E        &kp R         &kp T  /**/  &kp Y  &kp U          &kp I         &kp O        &kp P    /**/ &none
+&none /**/ &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LHSIFT F  &kp G  /**/  &kp H  &hm RSHIFT J   &hm RCTRL K   &hm RALT L   &td0     /**/ &none
+&none /**/ &kp Z       &kp X       &kp C        &kp V         &kp B  /**/  &kp N  &kp M          &kp COMMA     &kp DOT      &kp FSLH /**/ &none
+                       &td1 &lt NUM BSPC &mt LGUI RET                /**/  &mt RGUI SPACE &lt SYN DEL &mt RALT GRAVE
                         >;
                 };
                 lower_layer {
